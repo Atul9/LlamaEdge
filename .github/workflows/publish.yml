@@ -47,13 +47,13 @@ jobs:
           cargo build --target wasm32-wasi --release
           cp ./target/wasm32-wasi/release/llama-api-server.wasm ../llama-api-server.wasm
 
-      - name: Calculate checksum
-        id: checksum
-        run: |
-          sha256sum *.wasm > SHA256SUM
+      # - name: Calculate checksum
+      #   id: checksum
+      #   run: |
+      #     sha256sum *.wasm > SHA256SUM
 
-          echo "Debug info(SHA256SUM):"
-          cat SHA256SUM
+      #     echo "Debug info(SHA256SUM):"
+      #     cat SHA256SUM
 
       - name: Tag and release names
         id: tag_and_release_names

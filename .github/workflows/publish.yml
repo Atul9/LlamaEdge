@@ -26,19 +26,19 @@ jobs:
         with:
           target: wasm32-wasi
 
-      - name: Build simple
-        id: build_simple
-        run: |
-          cd simple
-          cargo build --target wasm32-wasi --release
-          cp ./target/wasm32-wasi/release/llama-simple.wasm ../llama-simple.wasm
+      # - name: Build simple
+      #   id: build_simple
+      #   run: |
+      #     cd simple
+      #     cargo build --target wasm32-wasi --release
+      #     cp ./target/wasm32-wasi/release/llama-simple.wasm ../llama-simple.wasm
 
-      - name: Build chat
-        id: build_chat
-        run: |
-          cd chat
-          cargo build --target wasm32-wasi --release
-          cp ./target/wasm32-wasi/release/llama-chat.wasm ../llama-chat.wasm
+      # - name: Build chat
+      #   id: build_chat
+      #   run: |
+      #     cd chat
+      #     cargo build --target wasm32-wasi --release
+      #     cp ./target/wasm32-wasi/release/llama-chat.wasm ../llama-chat.wasm
 
       - name: Build api-server
         id: build_api_server
